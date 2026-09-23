@@ -726,11 +726,14 @@ var FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbxuP88XmlTiswV8tD72
     var data = new URLSearchParams(new FormData(form));
     data.append("page", location.href);
     var btn = form.querySelector("button[type=submit]"); btn.disabled = true; btn.textContent = "Sending...";
-    fetch(FORM_ENDPOINT, {method:"POST", mode:"no-cors", body:data}).then(function(){
-      var first = name.split(" ")[0];
-      document.getElementById("ok-msg").innerHTML = "Thanks, " + first.replace(/[<>&"]/g,"") + ". Lacey will call you to confirm your seat and suite. Want it sooner? Call <a href=\"tel:+18889909660\">888-990-9660</a>.";
+    var first = name.split(" ")[0].replace(/[<>&"]/g,"");
+    var done = setTimeout(function(){
+      document.getElementById("ok-msg").innerHTML = "Thanks, " + first + ". Lacey will call you to confirm your seat and suite. Want it sooner? Call <a href=\"tel:+18889909660\">888-990-9660</a>.";
       box.classList.add("sent"); track("seat_request", "Lead");
-    }).catch(function(){ box.classList.add("failed"); btn.disabled = false; btn.textContent = "Reserve my free seat"; });
+    }, 900);
+    fetch(FORM_ENDPOINT, {method:"POST", mode:"no-cors", body:data, keepalive:true}).catch(function(){
+      clearTimeout(done); box.classList.remove("sent"); box.classList.add("failed"); btn.disabled = false; btn.textContent = "Reserve my free seat";
+    });
   });
 
   var bar = document.getElementById("callbar"), hero = document.querySelector(".hero"), res = document.getElementById("reserve");
