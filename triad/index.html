@@ -332,22 +332,33 @@ footer .fine a{color:#9BA1AE}
 .lhero{padding:clamp(48px,7vw,104px) 0 clamp(56px,8vw,110px)}
 .lhero .wrap{display:block;max-width:900px}
 .lhero h1{margin-top:22px}
-.bridge{margin:40px 0 8px;background:#fff;border-radius:12px;padding:clamp(20px,3.5vw,32px);box-shadow:0 1px 0 var(--line),0 24px 50px -40px rgba(23,37,110,.5)}
-.b-row{display:grid;grid-template-columns:1fr;gap:14px;align-items:center}
-@media (min-width:560px){.b-row{grid-template-columns:150px 1fr}}
-.b-lbl b{display:block;font-stretch:70%;font-weight:800;font-size:24px;text-transform:uppercase;color:var(--navy);line-height:1}
-.b-lbl span{display:block;margin-top:4px;font-stretch:80%;font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
-.b-stages{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(8px,2vw,16px)}
-.st{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:96px;position:relative}
-.st .bone{display:block;width:76%;height:22px;background:var(--navy);border-radius:5px}
-.st .pad{display:block;width:62%;background:var(--red);border-radius:3px;margin:2px 0}
-.st.knee .bone{border-radius:5px 5px 14px 14px}
-.st.knee .bone.r{border-radius:14px 14px 5px 5px}
-.st em{position:absolute;top:0;left:0;font-style:normal;font-stretch:66%;font-weight:800;font-size:14px;color:var(--mute)}
-.b-link{display:flex;align-items:center;gap:12px;margin:18px 0;color:var(--gold)}
-.b-link::before,.b-link::after{content:"";flex:1;border-top:2px dashed #E5D7A8}
-.b-link span{font-stretch:78%;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#B08A1C}
-.bridge figcaption{margin-top:20px;font-family:var(--serif);font-style:italic;font-size:17px;color:var(--ink-2);text-align:center}
+.tri{margin:44px 0 10px}
+.tri-card{background:#fff;border-radius:14px;padding:clamp(18px,3vw,30px) clamp(14px,3vw,30px) clamp(16px,2.4vw,24px);box-shadow:0 1px 0 var(--line),0 30px 60px -40px rgba(23,37,110,.55);text-align:center}
+.tri-eye{font-family:var(--cond);font-stretch:78%;font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#B08A1C;display:flex;align-items:center;gap:12px}
+.tri-eye::before,.tri-eye::after{content:"";flex:1;border-top:2px dashed #E5D7A8}
+.tri-stage{margin-top:6px;font-family:var(--cond);font-stretch:66%;font-weight:800;text-transform:uppercase;font-size:clamp(30px,5vw,44px);line-height:1;color:var(--navy)}
+.tri-stage b{display:inline-block;color:var(--red);min-width:.6em}
+.tri-stage b.pop{animation:tripop .45s cubic-bezier(.2,.9,.3,1.4)}
+.tri-stage i{font-style:normal;font-size:.55em;color:var(--mute);letter-spacing:.04em}
+@keyframes tripop{0%{transform:scale(.55);opacity:.2}100%{transform:none;opacity:1}}
+.tri-pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(6px,2vw,22px);margin-top:clamp(6px,1.5vw,14px)}
+.tri-p svg{display:block;width:100%;height:auto;overflow:hidden}
+.tri-p b{display:block;margin-top:6px;font-family:var(--cond);font-stretch:70%;font-weight:800;font-size:clamp(20px,2.6vw,26px);text-transform:uppercase;color:var(--navy);line-height:1}
+.tri-p span{display:block;margin-top:4px;font-family:var(--cond);font-stretch:80%;font-weight:600;font-size:clamp(11px,1.4vw,13px);letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+.tri-ctl{max-width:420px;margin:clamp(18px,2.6vw,26px) auto 0}
+.tri-ctl input{-webkit-appearance:none;appearance:none;display:block;width:100%;height:44px;margin:0;background:transparent;cursor:pointer;touch-action:pan-y}
+.tri-ctl input::-webkit-slider-runnable-track{height:8px;border-radius:4px;background:linear-gradient(90deg,var(--red) calc(var(--tri-p,0) * 100%),#E3E7F2 0)}
+.tri-ctl input::-moz-range-track{height:8px;border-radius:4px;background:linear-gradient(90deg,var(--red) calc(var(--tri-p,0) * 100%),#E3E7F2 0)}
+.tri-ctl input::-webkit-slider-thumb{-webkit-appearance:none;width:34px;height:34px;margin-top:-13px;border-radius:50%;background:#fff;border:3px solid var(--red);box-shadow:0 4px 12px -4px rgba(23,37,110,.5)}
+.tri-ctl input::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:#fff;border:3px solid var(--red);box-shadow:0 4px 12px -4px rgba(23,37,110,.5)}
+.tri-ctl input:focus-visible{outline:3px solid var(--gold);outline-offset:4px;border-radius:8px}
+.tri-ticks{display:flex;justify-content:space-between;margin:2px 0 0}
+.tri-ticks button{width:34px;height:30px;padding:0;border:0;background:none;color:var(--mute);font:800 16px/1 var(--cond);font-stretch:70%;cursor:pointer;border-radius:6px}
+.tri-ticks button.on{color:var(--red)}
+.tri-ticks button:focus-visible{outline:3px solid var(--gold)}
+.tri-hint{margin-top:8px;font-family:var(--cond);font-stretch:80%;font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);transition:opacity .4s}
+.tri.used .tri-hint{opacity:0}
+.tri figcaption{margin-top:22px;font-family:var(--serif);font-style:italic;font-size:17px;color:var(--ink-2);text-align:center}
 .midcta{margin-top:30px!important;font-family:var(--cond)!important;font-stretch:80%;font-weight:700;font-size:19px!important;color:var(--ink-2)!important}
 .midcta a{color:var(--red);text-decoration:none;border-bottom:2px solid currentColor;white-space:nowrap}
 .tfaq{background:var(--cream)}
@@ -476,25 +487,19 @@ footer .fine a{color:#9BA1AE}
     <p>Here's the part I find fascinating.</p>
     <p>If you've ever explained the phases of spinal degeneration to a patient, you already know how to explain the knee. Loss of disc height. Loss of cartilage height. Stage one, stage two, stage three, stage four. There's a parallel, and there's a bridge between how you present a spinal disc condition and how you present a knee.</p>
 
-    <figure class="bridge rv" aria-label="The same four stages: loss of disc height in the spine, loss of cartilage height in the knee">
-      <div class="b-row">
-        <div class="b-lbl"><b>Spine</b><span>Loss of disc height</span></div>
-        <div class="b-stages">
-          <div class="st"><i class="bone"></i><i class="pad" style="height:22px"></i><i class="bone"></i><em>1</em></div>
-          <div class="st"><i class="bone"></i><i class="pad" style="height:15px"></i><i class="bone"></i><em>2</em></div>
-          <div class="st"><i class="bone"></i><i class="pad" style="height:9px"></i><i class="bone"></i><em>3</em></div>
-          <div class="st"><i class="bone"></i><i class="pad" style="height:3px"></i><i class="bone"></i><em>4</em></div>
+    <figure class="tri" id="tri" aria-label="The same four stages: loss of disc height in the spine and loss of cartilage height in the knee">
+      <div class="tri-card">
+        <p class="tri-eye">The same story</p>
+        <p class="tri-stage" aria-live="polite">Stage <b id="tri-n">1</b> <i>of 4</i></p>
+        <div class="tri-pair">
+          <div class="tri-p"><svg id="tri-spine" viewBox="0 0 300 330" role="img" aria-label="Two lumbar vertebrae and the disc between them, side view"></svg><b>Spine</b><span>Loss of disc height</span></div>
+          <div class="tri-p"><svg id="tri-knee" viewBox="0 0 300 330" role="img" aria-label="Knee joint, front view"></svg><b>Knee</b><span>Loss of cartilage height</span></div>
         </div>
-      </div>
-      <div class="b-link" aria-hidden="true"><span>The same story</span></div>
-      <div class="b-row">
-        <div class="b-lbl"><b>Knee</b><span>Loss of cartilage height</span></div>
-        <div class="b-stages">
-          <div class="st knee"><i class="bone r"></i><i class="pad" style="height:22px"></i><i class="bone"></i><em>1</em></div>
-          <div class="st knee"><i class="bone r"></i><i class="pad" style="height:15px"></i><i class="bone"></i><em>2</em></div>
-          <div class="st knee"><i class="bone r"></i><i class="pad" style="height:9px"></i><i class="bone"></i><em>3</em></div>
-          <div class="st knee"><i class="bone r"></i><i class="pad" style="height:3px"></i><i class="bone"></i><em>4</em></div>
+        <div class="tri-ctl">
+          <input type="range" id="tri-r" min="0" max="300" step="1" value="0" aria-label="Stage">
+          <div class="tri-ticks"><button type="button" aria-label="Stage 1">1</button><button type="button" aria-label="Stage 2">2</button><button type="button" aria-label="Stage 3">3</button><button type="button" aria-label="Stage 4">4</button></div>
         </div>
+        <p class="tri-hint" aria-hidden="true">Drag the slider to see all four stages</p>
       </div>
       <figcaption>Stage one to stage four. Explain one, and you already know how to explain the other.</figcaption>
     </figure>
@@ -697,6 +702,405 @@ var FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbxuP88XmlTiswV8tD72
     bar.classList.toggle("on", h < 0 && r > window.innerHeight * .75);
   }
   window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
+})();
+</script><script>
+/* Triad "same story" figure: a lumbar motion segment (side view) and a left knee (front view) that wear from stage one
+   to stage four together, traced from Kris's stage reference and drawn in the brand colours. Live SVG so the geometry can be interpolated by the slider.
+   stagesDraw(svgSpine, svgKnee, idPrefix) -> set(t), t in 0..1. Both SVGs use viewBox 0 0 300 330. */
+function stagesDraw(spineSvg, kneeSvg, pfx){
+  pfx = pfx || "tri";
+  var NS = "http://www.w3.org/2000/svg", NAVY = "#17256E";
+  function L(a, b, t){ return a + (b - a) * t; }
+  function sm(e0, e1, x){ x = Math.max(0, Math.min(1, (x - e0) / (e1 - e0))); return x * x * (3 - 2 * x); }
+  function mix(c1, c2, t){
+    var a = parseInt(c1.slice(1), 16), b = parseInt(c2.slice(1), 16), o = "#";
+    [16, 8, 0].forEach(function(s){ var v = Math.round(L(a >> s & 255, b >> s & 255, t)); o += (v < 16 ? "0" : "") + v.toString(16); });
+    return o;
+  }
+  function f(n){ return n.toFixed(1); }
+  // closed Catmull-Rom spline through points -> smooth path
+  function smooth(p){
+    var n = p.length, d = "M" + f(p[0][0]) + "," + f(p[0][1]);
+    for (var i = 0; i < n; i++){
+      var p0 = p[(i - 1 + n) % n], p1 = p[i], p2 = p[(i + 1) % n], p3 = p[(i + 2) % n];
+      d += "C" + f(p1[0] + (p2[0] - p0[0]) / 6) + "," + f(p1[1] + (p2[1] - p0[1]) / 6) + " " +
+           f(p2[0] - (p3[0] - p1[0]) / 6) + "," + f(p2[1] - (p3[1] - p1[1]) / 6) + " " + f(p2[0]) + "," + f(p2[1]);
+    }
+    return d + "Z";
+  }
+  // open spline (for the nerve cord and sclerosis lines)
+  function curve(p){
+    var d = "M" + f(p[0][0]) + "," + f(p[0][1]);
+    for (var i = 0; i < p.length - 1; i++){
+      var p0 = p[Math.max(0, i - 1)], p1 = p[i], p2 = p[i + 1], p3 = p[Math.min(p.length - 1, i + 2)];
+      d += "C" + f(p1[0] + (p2[0] - p0[0]) / 6) + "," + f(p1[1] + (p2[1] - p0[1]) / 6) + " " +
+           f(p2[0] - (p3[0] - p1[0]) / 6) + "," + f(p2[1] - (p3[1] - p1[1]) / 6) + " " + f(p2[0]) + "," + f(p2[1]);
+    }
+    return d;
+  }
+  // bone spur: base a, tip b, base c, curving through two control points
+  function beak(ax, ay, bx, by, cx, cy, q1x, q1y, q2x, q2y){
+    return "M" + f(ax) + "," + f(ay) + "Q" + f(q1x) + "," + f(q1y) + " " + f(bx) + "," + f(by) + "Q" + f(q2x) + "," + f(q2y) + " " + f(cx) + "," + f(cy) + "Z";
+  }
+  function dense(p, n){
+    var out = [], N = p.length;
+    for (var i = 0; i < N; i++){
+      var p0 = p[(i - 1 + N) % N], p1 = p[i], p2 = p[(i + 1) % N], p3 = p[(i + 2) % N];
+      for (var k = 0; k < n; k++){
+        var u = k / n, u2 = u * u, u3 = u2 * u;
+        out.push([0, 1].map(function(j){ return .5 * (2 * p1[j] + (-p0[j] + p2[j]) * u + (2 * p0[j] - 5 * p1[j] + 4 * p2[j] - p3[j]) * u2 + (-p0[j] + 3 * p1[j] - 3 * p2[j] + p3[j]) * u3); }));
+      }
+    }
+    return out;
+  }
+  function hsh(n){ var x = Math.sin(n * 127.1 + 311.7) * 43758.5453; return (x - Math.floor(x)) * 2 - 1; }
+  // worn bone: jagged, lumpy edges where w(point) says the wear is, scaled by amp
+  function rough(pts, amp, seed, w){
+    var N = pts.length;
+    return pts.map(function(p, i){
+      if(amp <= 0) return p;
+      var a = pts[(i - 1 + N) % N], b = pts[(i + 1) % N], dx = b[0] - a[0], dy = b[1] - a[1], l = Math.sqrt(dx * dx + dy * dy) || 1;
+      var jag = (hsh(seed + i - 1) + 2 * hsh(seed + i) + hsh(seed + i + 1)) / 4, lump = Math.sin(i * .21 + seed) * .6;
+      var d = amp * w(p) * (jag + lump);
+      return [p[0] - dy / l * d, p[1] + dx / l * d];
+    });
+  }
+  function poly(p){ return "M" + p.map(function(q){ return f(q[0]) + "," + f(q[1]); }).join("L") + "Z"; }
+  // bone spur as a claw: from base a, a convex outer edge out to a sharp tip t (bulging along k), then a concave
+  // inner edge back to base b
+  function claw(ax, ay, tx, ty, bx, by, kx, ky){
+    return "M" + f(ax) + "," + f(ay) + "C" + f(ax + (tx - ax) * .35 + kx) + "," + f(ay + (ty - ay) * .35 + ky) + " " +
+      f(ax + (tx - ax) * .8 + kx * .5) + "," + f(ay + (ty - ay) * .8 + ky * .5) + " " + f(tx) + "," + f(ty) +
+      "Q" + f(bx + (tx - bx) * .45 - kx * .3) + "," + f(by + (ty - by) * .45 - ky * .3) + " " + f(bx) + "," + f(by) + "Z";
+  }
+  /* Bone spur shaped from the radiology descriptions: a claw osteophyte is a broad, roughly triangular outgrowth at the
+     edge of the joint whose tip curves toward the joint (Macnab), and knee spurs are "lipping" that extends the bone
+     margin outward. So: a wide base along the bone edge, a chunky irregular outer edge with a couple of blunt lumps,
+     and a rounded tip that hooks toward the joint. Each spur has its own seed so no two match. Drawn in corner space
+     (u = out from the bone edge as a fraction of s, v = toward the joint), placed at corner (cx, cy) facing ox / jy */
+  function odense(p, n){
+    var out = [];
+    for (var i = 0; i < p.length - 1; i++){
+      var p0 = p[Math.max(0, i - 1)], p1 = p[i], p2 = p[i + 1], p3 = p[Math.min(p.length - 1, i + 2)];
+      for (var k = 0; k < n; k++){
+        var u = k / n, u2 = u * u, u3 = u2 * u;
+        out.push([0, 1].map(function(j){ return .5 * (2 * p1[j] + (-p0[j] + p2[j]) * u + (2 * p0[j] - 5 * p1[j] + 4 * p2[j] - p3[j]) * u2 + (-p0[j] + 3 * p1[j] - 3 * p2[j] + p3[j]) * u3); }));
+      }
+    }
+    out.push(p[p.length - 1]); return out;
+  }
+  function lip(seed){
+    var r = function(i){ return hsh(seed * 7.3 + i); };   // -1..1
+    var edge = [[0, -17], [.2 + .05 * r(1), -15], [.36 + .06 * r(2), -12 + r(3)], [.3 + .05 * r(4), -9.6], [.56 + .07 * r(5), -7.2 + .6 * r(6)],
+      [.7 + .05 * r(7), -4.6], [.62 + .05 * r(8), -3.3], [.88 + .05 * r(9), -1.4], [.97, .5], [.92, 1.9 + .5 * r(10)], [.66, 1.4], [.32, .3], [0, -.4]];
+    return [[-6, -17]].concat(odense(edge, 5), [[-6, -.4]]);
+  }
+  var LIPS = {};
+  function spurAt(s, cx, cy, ox, jy, seed){
+    var shape = LIPS[seed] || (LIPS[seed] = lip(seed));
+    return poly(shape.map(function(p){ var u = p[0] <= 0 ? p[0] : p[0] * s; return [cx + ox * u, cy + jy * p[1]]; }));
+  }
+  function el(parent, tag, attrs){
+    var e = document.createElementNS(NS, tag);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    parent.appendChild(e); return e;
+  }
+  var uid = 0;
+  function setup(svg, id){
+    var d = el(svg, "defs", {});
+    d.innerHTML =
+      '<linearGradient id="' + id + 'b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFDF7"/><stop offset=".6" stop-color="#F1F0EC"/><stop offset="1" stop-color="#DCE1EF"/></linearGradient>' +
+      '<linearGradient id="' + id + 'c" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EC5038"/><stop offset="1" stop-color="#B81A10"/></linearGradient>' +
+      '<pattern id="' + id + 'p" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(12)"><path d="M0 5.5Q2.75 3 5.5 5.5T11 5.5M5.5 0Q3 2.75 5.5 5.5T5.5 11" fill="none" stroke="#B7C0DC" stroke-width=".7"/></pattern>' +
+      '<radialGradient id="' + id + 'g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#F7C244" stop-opacity=".5"/><stop offset="1" stop-color="#F7C244" stop-opacity="0"/></radialGradient>' +
+      '<radialGradient id="' + id + 'h" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D22A1A" stop-opacity=".55"/><stop offset="1" stop-color="#D22A1A" stop-opacity="0"/></radialGradient>' +
+      '<radialGradient id="' + id + 'tp" cx=".38" cy=".35" r=".7"><stop offset="0" stop-color="#F6F6F4"/><stop offset=".6" stop-color="#DDE2EE"/><stop offset="1" stop-color="#B3BCD8"/></radialGradient>' +
+      '<radialGradient id="' + id + 'bg" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#E9EDF8"/><stop offset="1" stop-color="#E9EDF8" stop-opacity="0"/></radialGradient>';
+    el(svg, "circle", {cx: 150, cy: 165, r: 160, fill: "url(#" + id + "bg)"});
+    // bones fade out at the top and bottom edges; labels sit above the fade
+    d.innerHTML += '<linearGradient id="' + id + 'f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000"/><stop offset=".1" stop-color="#fff"/><stop offset=".86" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>' +
+      '<mask id="' + id + 'm" maskUnits="userSpaceOnUse" x="-20" y="-5" width="300" height="330"><rect x="-20" y="-5" width="300" height="330" fill="url(#' + id + 'f)"/></mask>';
+    var g = el(svg, "g", {transform: "translate(20,5)", mask: "url(#" + id + "m)"});
+    return {defs: d, g: g, labels: el(svg, "g", {}), id: id};
+  }
+  // an illustrated bone: gradient fill, soft inner rim shade, navy outline
+  function Bone(S, plain){
+    var cid = S.id + "k" + (uid++), clip = el(S.defs, "clipPath", {id: cid}), cp = el(clip, "path", {});
+    var parts = [el(S.g, "path", {fill: "url(#" + S.id + "b)"})];
+    if(!plain){
+      parts.push(el(S.g, "path", {fill: "none", stroke: "#7F8CC0", "stroke-width": 12, opacity: .16, "clip-path": "url(#" + cid + ")"}));
+    }
+    parts.push(el(S.g, "path", {fill: "none", stroke: NAVY, "stroke-width": 2.6, "stroke-linejoin": "round"}));
+    if(plain) parts[parts.length - 1].setAttribute("stroke-linejoin", "miter");
+    return {clip: "url(#" + cid + ")", parts: parts,
+            set: function(d){ cp.setAttribute("d", d); parts.forEach(function(p){ p.setAttribute("d", d); }); },
+            show: function(o){ parts.forEach(function(p){ p.style.visibility = o ? "visible" : "hidden"; }); }};
+  }
+  // labels: fixed on-screen size whatever the drawing's size, with a haloed leader line to the part
+  var allLabels = [];
+  function Label(S, text, tx, ty, end, from){
+    var halo = el(S.labels, "line", {stroke: "#fff", "stroke-width": 4, "stroke-linecap": "round", "vector-effect": "non-scaling-stroke"});
+    var line = el(S.labels, "line", {stroke: NAVY, "stroke-width": 1.2, "vector-effect": "non-scaling-stroke"});
+    var dot = el(S.labels, "circle", {fill: NAVY});
+    var tx_ = el(S.labels, "text", {x: tx, y: ty, "text-anchor": end ? "end" : "start", fill: NAVY, "paint-order": "stroke", stroke: "#fff", "stroke-linejoin": "round",
+      style: "font-family:Archivo,'Arial Narrow',Arial,sans-serif;font-weight:700;letter-spacing:.08em"});
+    tx_.textContent = text.toUpperCase();
+    var lab = {svg: S, line: line, halo: halo, dot: dot, text: tx_,
+      set: function(x, y, o){
+        [line, halo].forEach(function(l){ l.setAttribute("x1", from[0]); l.setAttribute("y1", from[1]); l.setAttribute("x2", x + 20); l.setAttribute("y2", y + 5); });
+        dot.setAttribute("cx", x + 20); dot.setAttribute("cy", y + 5);
+        [line, halo, dot, tx_].forEach(function(e){ e.style.opacity = o; });
+      }};
+    allLabels.push(lab); return lab;
+  }
+  function relabel(){
+    allLabels.forEach(function(l){
+      var w = l.svg.svgEl.getBoundingClientRect().width, k = w > 0 ? w / 300 : 1, px = w < 260 ? 9.5 : 11.5;
+      l.text.setAttribute("font-size", f(px / k)); l.text.setAttribute("stroke-width", f(3.5 / k)); l.dot.setAttribute("r", f(2.6 / k));
+    });
+  }
+
+  /* ---------- spine: side view, front of the body on the left ---------- */
+  var SP = setup(spineSvg, pfx + "s"); SP.svgEl = spineSvg;
+  /* One vertebra, hand-traced on a grid from Kris's stage reference (lumbar side view), in that image's pixels relative
+     to the top front corner of the vertebral body. Body, then the top notch, the superior articular process, the
+     transverse/spinous wing, the inferior articular process and the inferior notch, all as one outline. */
+  var REF = [[6, 0], [60, -1], [120, -2], [150, -3],
+    [158, -3], [160, 2], [164, 5], [170, 7], [178, 5], [184, 0], [189, -7], [192, -17], [194, -27],
+    [200, -30], [213, -29], [225, -23], [234, -16], [239, -7], [239, 5], [235, 15], [231, 24],
+    [233, 27], [248, 33], [268, 37], [288, 38], [305, 40], [317, 44], [322, 54], [323, 68], [322, 83], [319, 98], [315, 110], [308, 115], [298, 114], [285, 107], [273, 97], [260, 92], [253, 92],
+    [248, 93], [243, 100], [240, 113], [238, 125], [235, 133], [226, 138], [218, 136], [213, 128], [210, 118], [208, 105], [203, 93], [200, 83], [200, 75], [197, 68], [188, 62], [173, 62], [163, 64], [159, 70], [162, 83], [165, 93], [164, 100], [158, 104],
+    [154, 110], [120, 112], [60, 113], [6, 112], [1, 106], [3, 60], [1, 6]];
+  var FACET = [[194, 19], [208, 17], [225, 15], [232, 25], [229, 48], [210, 52], [195, 53]];
+  var X0 = 18, SC = .747, W = 158 * SC, H = 113 * SC, X1 = X0 + W;
+  function vpts(pts, y){ return pts.map(function(p){ return [X0 + p[0] * SC, y + p[1] * SC]; }); }
+  var FTOP = 62 * SC, FBOT = 7 * SC, GX = X0 + 176 * SC;   // foramen: under the upper notch arch, above the lower notch
+  var S = {
+    disc: el(SP.g, "path", {fill: "url(#" + SP.id + "c)", stroke: "#8E1209", "stroke-width": 2.4, "stroke-linejoin": "round"}),
+    spurU: Bone(SP, true), spurL: Bone(SP, true), spurP: Bone(SP, true),
+    vU: Bone(SP), fU: el(SP.g, "path", {fill: "none", stroke: NAVY, "stroke-width": 2.2, "stroke-linecap": "round"}),
+    vL: Bone(SP), fL: el(SP.g, "path", {fill: "none", stroke: NAVY, "stroke-width": 2.2, "stroke-linecap": "round"}),
+    dark: el(SP.g, "path", {fill: "#5E2A24"}),
+    lam1: el(SP.g, "path", {fill: "none", stroke: "#F58A72", "stroke-width": 1.1}),
+    lam2: el(SP.g, "path", {fill: "none", stroke: "#F58A72", "stroke-width": 1.1}),
+    nuc: el(SP.g, "ellipse", {}),
+    sclU: el(SP.g, "path", {fill: "none", stroke: NAVY, "stroke-linecap": "round"}),
+    sclL: el(SP.g, "path", {fill: "none", stroke: NAVY, "stroke-linecap": "round"}),
+    halo: el(SP.g, "ellipse", {}),
+    cordO: el(SP.g, "path", {fill: "none", "stroke-width": 11, "stroke-linecap": "round"}),
+    cordI: el(SP.g, "path", {fill: "none", "stroke-width": 7, "stroke-linecap": "round"}),
+    gang: el(SP.g, "ellipse", {"stroke-width": 2.4}),
+    cordH: el(SP.g, "path", {fill: "none", stroke: "#FFF1C2", "stroke-width": 1.6, "stroke-linecap": "round", opacity: .8})
+  };
+  var SL = {
+    disc: Label(SP, "Disc", 6, 18, false, [24, 24]),
+    nerve: Label(SP, "Nerve root", 296, 18, true, [252, 24]),
+    spur: Label(SP, "Bone spur", 6, 324, false, [24, 312])
+  };
+  // the traced outline, densified once; wear is strongest at the endplates and front corners
+  var REFD = dense(REF, 5);
+  function vwear(edgeY){
+    return function(p){
+      var d = p[1] - edgeY, e = Math.exp(-d * d / 150);
+      if(p[0] > 160) return .03 + e * .15;
+      return Math.max(.03, e * (p[0] < 14 ? 1.2 : 1));
+    };
+  }
+  var WEAR_U = vwear(113), WEAR_L = vwear(0);
+  // mottled patches on worn bone (in the traced image's pixels: x, y, rx, ry)
+  var BLOT = [[40, 14, 16, 6], [118, 100, 18, 6], [72, 98, 12, 5], [134, 12, 11, 5], [270, 70, 15, 8], [214, 42, 9, 6], [300, 95, 8, 5]];
+  // each vertebra's patches sit on it, under its facet line
+  function blots(v, before){ return BLOT.map(function(){ var e = el(SP.g, "path", {fill: "#C3CADF", "clip-path": v.clip}); SP.g.insertBefore(e, before); return e; }); }
+  var BU = blots(S.vU, S.fU), BL = blots(S.vL, S.fL);
+  function blob(cx, cy, rx, ry, seed){
+    var pts = [];
+    for (var i = 0; i < 10; i++){ var a = i / 10 * Math.PI * 2, r = 1 + hsh(seed + i) * .28; pts.push([cx + Math.cos(a) * rx * r, cy + Math.sin(a) * ry * r]); }
+    return smooth(pts);
+  }
+  function disc(x0, x1, ya, yb, bf, bb){
+    return "M" + f(x0 + 4) + "," + f(ya) + "L" + f(x1 - 4) + "," + f(ya) + "Q" + f(x1 + 4 + bb) + "," + f((ya + yb) / 2) + " " + f(x1 - 4) + "," + f(yb) +
+      "L" + f(x0 + 4) + "," + f(yb) + "Q" + f(x0 - 4 - bf) + "," + f((ya + yb) / 2) + " " + f(x0 + 4) + "," + f(ya) + "Z";
+  }
+  function spine(t){
+    var g = L(28, 6, t), b = L(2.5, 13, sm(.15, 1, t)), s = 22 * sm(.45, 1, t), wear = sm(.4, 1, t);
+    var u1 = 160 - g / 2, u0 = u1 - H, l0 = 160 + g / 2;
+    S.vU.set(poly(vpts(rough(REFD, 9 * wear, 11, WEAR_U), u0))); S.vL.set(poly(vpts(rough(REFD, 9 * wear, 57, WEAR_L), l0)));
+    [[BU, u0, 3], [BL, l0, 40]].forEach(function(v){
+      v[0].forEach(function(e, i){
+        var p = BLOT[i], o = sm(.35 + i * .04, .85, t);
+        e.setAttribute("d", blob(X0 + p[0] * SC, v[1] + p[1] * SC, p[2] * SC * o + .1, p[3] * SC * o + .1, v[2] + i * 9));
+        e.setAttribute("opacity", .75 * o);
+      });
+    });
+    S.fU.setAttribute("d", curve(vpts(FACET, u0))); S.fL.setAttribute("d", curve(vpts(FACET, l0)));
+    // disc bulges front and back as it loses height; the rings of the annulus fade as it flattens
+    S.disc.setAttribute("d", disc(X0 + 1, X1 - 1, u1 - 3, l0 + 3, b * 1.3, b));
+    // the disc dries out and darkens in the late stages
+    S.dark.setAttribute("d", disc(X0 + 1, X1 - 1, u1 - 3, l0 + 3, b * 1.3, b)); S.dark.setAttribute("opacity", .6 * sm(.4, 1, t));
+    var ring = 1 - sm(.35, .7, t);
+    S.lam1.setAttribute("d", disc(X0 + 6, X1 - 6, u1 + 4, l0 - 4, b, b * .8)); S.lam1.setAttribute("opacity", ring);
+    S.lam2.setAttribute("d", disc(X0 + 14, X1 - 14, u1 + 7.5, l0 - 7.5, b * .7, b * .6)); S.lam2.setAttribute("opacity", ring * .8);
+    S.nuc.setAttribute("cx", X0 + W * .5); S.nuc.setAttribute("cy", 160);
+    S.nuc.setAttribute("rx", L(27, 17, t)); S.nuc.setAttribute("ry", Math.max(.5, g / 2 - 7));
+    S.nuc.setAttribute("fill", mix("#FF8F78", "#6E0D07", sm(0, .9, t)));
+    S.nuc.setAttribute("opacity", 1 - sm(.8, 1, t));
+    // osteophytes: front corners reach toward each other, a small one at the back rim points into the foramen
+    // horizontal beaks off the front corners whose tips hook toward the disc
+    S.spurU.set(spurAt(s, X0 + 1, u1, -1, 1, 3));
+    S.spurL.set(spurAt(s, X0 + 1, l0, -1, -1, 8));
+    var sp = s * .6;
+    S.spurP.set(spurAt(sp, X1 - 1, l0, 1, -1, 13));
+    [S.spurU, S.spurL, S.spurP].forEach(function(o){ o.show(s > .5); });
+    // endplates thicken (sclerosis) in the late stages
+    var sw = 3.5 * sm(.5, 1, t);
+    S.sclU.setAttribute("d", "M" + f(X0 + 7) + "," + f(u1 - 2.5) + "Q" + f((X0 + X1) / 2) + "," + f(u1 - 5) + " " + f(X1 - 7) + "," + f(u1 - 2.5));
+    S.sclL.setAttribute("d", "M" + f(X0 + 7) + "," + f(l0 + 2.5) + "Q" + f((X0 + X1) / 2) + "," + f(l0 + 5) + " " + f(X1 - 7) + "," + f(l0 + 2.5));
+    [S.sclU, S.sclL].forEach(function(e){ e.setAttribute("stroke-width", sw); e.setAttribute("opacity", sw > .2 ? .55 : 0); });
+    // nerve root fills the foramen and runs down and forward over the disc; the foramen loses height with the disc,
+    // so by stage four the root is squeezed and irritated
+    var q = sm(.35, 1, t), top = u0 + FTOP, bot = l0 + FBOT, gy = (top + bot) / 2, ry = Math.max(8, (bot - top) / 2 - 7);
+    var gold = mix("#F7C244", "#E8452F", q), dark = mix("#8A6410", "#8E1209", q);
+    var cord = curve([[GX, gy + ry - 6], [GX - 4, gy + ry + 8], [GX - 18, gy + ry + 24], [GX - 40, gy + ry + 38]]);
+    S.cordO.setAttribute("d", cord); S.cordI.setAttribute("d", cord); S.cordH.setAttribute("d", cord);
+    S.cordO.setAttribute("stroke", dark); S.cordI.setAttribute("stroke", gold);
+    S.gang.setAttribute("cx", GX); S.gang.setAttribute("cy", gy); S.gang.setAttribute("rx", L(9, 11, q)); S.gang.setAttribute("ry", ry);
+    S.gang.setAttribute("fill", gold); S.gang.setAttribute("stroke", dark);
+    S.halo.setAttribute("cx", GX); S.halo.setAttribute("cy", gy); S.halo.setAttribute("rx", 26); S.halo.setAttribute("ry", ry + 16);
+    S.halo.setAttribute("fill", "url(#" + SP.id + (q > .5 ? "h)" : "g)"));
+    SL.disc.set(X0 + 30, 160, 1);
+    SL.nerve.set(GX + 3, gy - ry * .5, 1);
+    SL.spur.set(X0 - s * .7, l0 + 6, sm(.5, .75, t));
+  }
+
+  /* ---------- knee: front view of a left knee, inner (medial) side on the left, fibula on the outer side ---------- */
+  var KN = setup(kneeSvg, pfx + "k"); KN.svgEl = kneeSvg;
+  /* Hand-traced on a grid from Kris's stage reference (knee, front view), mirrored from a right knee to a left one.
+     Femur with its cartilage cap over both condyles, a combined cartilage and meniscus band on the tibia, the fibula
+     tucked behind the outer tibia. Coordinates are drawing units with the joint line at y = 160. */
+  var FEM_SIDE_M = [[86, -27], [85, -1], [82, 16], [72, 33], [58, 44], [43, 59], [37, 73], [35, 89], [40, 106], [45, 119]];
+  var FEM_SIDE_L = [[222, 121], [227, 109], [228, 93], [227, 73], [218, 53], [205, 38], [195, 24], [190, 1], [188, -27]];
+  // underside of the cartilage cap (medial to lateral), relative to its lowest point
+  var CAP_BOT = [[45, -31], [43, -21], [45, -11], [53, -4], [68, -1], [88, -1], [105, -6], [115, -12], [127, -19], [135, -21], [145, -17], [155, -9], [165, -2], [178, 0], [198, -1], [213, -7], [220, -17], [222, -29]];
+  // where the cap ends on the front of the femur (lateral to medial)
+  var CAP_TOP = [[220, 121], [205, 99], [192, 73], [183, 53], [165, 44], [148, 46], [132, 51], [118, 53], [102, 56], [85, 64], [72, 76], [60, 96], [43, 119]];
+  var BAND_BOT = [[43, 163], [58, 168], [85, 171], [112, 166], [128, 164], [145, 166], [178, 171], [205, 169], [215, 163]];
+  var TIB_SIDES = [[218, 179], [215, 199], [208, 213], [195, 226], [185, 239], [180, 256], [175, 276], [168, 299], [165, 344], [82, 344], [82, 299], [80, 276], [75, 253], [68, 233], [55, 213], [45, 196], [41, 179]];
+  var FIB = [[215, 196], [225, 193], [233, 201], [237, 219], [235, 233], [230, 243], [225, 253], [222, 273], [218, 299], [217, 344], [193, 344], [192, 299], [188, 259], [187, 238], [202, 229], [208, 213]];
+  var PITS = [[70, 128, 4, 2.5], [96, 136, 3, 2], [150, 132, 3.5, 2.2], [182, 124, 2.5, 1.8], [120, 118, 2.6, 1.6], [196, 138, 3, 2]];
+  var K = {
+    fib: Bone(KN),
+    tib: Bone(KN),
+    band: el(KN.g, "path", {fill: "url(#" + KN.id + "c)", stroke: "#8E1209", "stroke-width": 2.2, "stroke-linejoin": "round"}),
+    spT: Bone(KN, true), spF: Bone(KN, true), spTL: Bone(KN, true), spFL: Bone(KN, true),
+    fem: Bone(KN),
+    cap: el(KN.g, "path", {fill: "url(#" + KN.id + "cc)", stroke: "#B8321F", "stroke-width": 2, "stroke-linejoin": "round"}),
+    blots: [],
+    pits: PITS.map(function(){ return el(KN.g, "ellipse", {fill: "#EDEEF3", stroke: "#8E1209", "stroke-width": 1}); }),
+    scl: el(KN.g, "path", {fill: "none", stroke: NAVY, "stroke-linecap": "round"})
+  };
+  // mottled worn bone on the tibia just under the joint, kept inside the tibia outline
+  var TBLOT = [[64, 186, 14, 6], [182, 186, 12, 5], [120, 196, 10, 4], [92, 214, 8, 4]];
+  K.blots = TBLOT.map(function(){ var e = el(KN.g, "path", {fill: "#C3CADF", "clip-path": K.tib.clip}); KN.g.insertBefore(e, K.band); return e; });
+  // tibial spurs sit behind the tibia so only their teeth show
+  [K.spT, K.spTL].forEach(function(o){ o.parts.forEach(function(e){ KN.g.insertBefore(e, K.tib.parts[0]); }); });
+  KN.defs.innerHTML += '<linearGradient id="' + KN.id + 'cc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF1EC"/><stop offset=".65" stop-color="#FAD3C7"/><stop offset="1" stop-color="#F09C86"/></linearGradient>';
+  var KL = {
+    cart: Label(KN, "Cartilage", 6, 18, false, [24, 24]),
+    spur: Label(KN, "Bone spur", 6, 324, false, [24, 312]),
+    men: Label(KN, "Meniscus", 296, 324, true, [272, 312])
+  };
+  function lerpX(x, a, b){ return L(a, b, Math.max(0, Math.min(1, (x - 60) / 130))); }   // medial value a, lateral value b
+  function knee(t){
+    var cbm = L(20, 2, t), cbl = L(20, 12, t), cfm = L(10, .8, t), cfl = L(10, 6, t), s = 19 * sm(.45, 1, t), wear = sm(.4, 1, t);
+    function nearJoint(lo, hi){ return function(p){ return p[1] < lo || p[1] > hi ? .03 : 1; }; }
+    function cb(x){ return lerpX(x, cbm, cbl); }
+    function cf(x){ return lerpX(x, cfm, cfl); }
+    function sh(x){ return (20 - cb(x)) + (10 - cf(x)); }             // how far the femur has settled at x
+    // tibial band: fixed bottom on the plateau, top drops as it thins
+    var bandTop = BAND_BOT.slice().reverse().map(function(p){ return [p[0], p[1] - cb(p[0])]; });
+    K.band.setAttribute("d", smooth(BAND_BOT.concat(bandTop)));
+    K.tib.set(poly(rough(dense(BAND_BOT.map(function(p){ return [p[0], p[1] + 1]; }).concat(TIB_SIDES), 5), 5 * wear, 23, nearJoint(150, 215))));
+    K.fib.set(smooth(FIB));
+    // femur: sides follow the settling, the bone underside sits just above the cap
+    var capBot = CAP_BOT.map(function(p){ return [p[0], 150 + p[1] + sh(p[0])]; });
+    var boneBot = CAP_BOT.map(function(p){ return [p[0], 150 + p[1] + sh(p[0]) - cf(p[0]) - 1]; });
+    var sideM = FEM_SIDE_M.map(function(p){ return [p[0], p[1] + sh(p[0]) * Math.min(1, Math.max(0, (p[1] + 27) / 146))]; });
+    var sideL = FEM_SIDE_L.map(function(p){ return [p[0], p[1] + sh(p[0]) * Math.min(1, Math.max(0, (p[1] + 27) / 148))]; });
+    K.fem.set(poly(rough(dense(sideM.concat(boneBot.slice(2, -2), sideL), 5), 5 * wear, 71, nearJoint(95, 200))));
+    var capTop = CAP_TOP.map(function(p){ return [p[0], p[1] + sh(p[0]) + L(0, 8, t)]; });
+    // the cap wears through from underneath: a ragged lower edge
+    K.cap.setAttribute("d", poly(rough(dense(capBot.concat(capTop), 5), 4.5 * wear, 5, function(p){ return p[0] < 58 || p[0] > 208 ? 0 : p[1] > 125 ? 1 : 0; })));
+    // mottled worn bone on the femur and tibia near the joint
+    TBLOT.forEach(function(p, i){
+      var o = sm(.35 + i * .05, .85, t), y = p[1];
+      K.blots[i].setAttribute("d", blob(p[0], y, p[2] * o + .1, p[3] * o + .1, 90 + i * 7)); K.blots[i].setAttribute("opacity", .7 * o);
+    });
+    // worn cartilage pits in the late stages
+    K.pits.forEach(function(e, i){
+      var p = PITS[i], o = sm(.45 + i * .06, .8 + i * .03, t);
+      e.setAttribute("cx", p[0]); e.setAttribute("cy", p[1] + sh(p[0])); e.setAttribute("rx", p[2] * 1.9 * o + .01); e.setAttribute("ry", p[3] * 1.7 * o + .01);
+      e.style.visibility = o > .05 ? "visible" : "hidden";
+    });
+    // marginal osteophytes, mostly on the inner side
+    var tm = BAND_BOT[0][1], fm = 150 + CAP_BOT[0][1] + sh(45) + 10;
+    K.spT.set(spurAt(s, 44, tm, -1, -1, 21));
+    K.spF.set(spurAt(s, 44, fm, -1, 1, 34));
+    var sl = s * .55, tl = BAND_BOT[BAND_BOT.length - 1][1], fl = 150 + CAP_BOT[CAP_BOT.length - 1][1] + sh(222) + 10;
+    K.spTL.set(spurAt(sl, 214, tl, 1, -1, 45));
+    K.spFL.set(spurAt(sl, 222, fl, 1, 1, 52));
+    [K.spT, K.spF, K.spTL, K.spFL].forEach(function(o){ o.show(s > .5); });
+    // subchondral sclerosis under the worn inner plateau
+    var sw = 6 * sm(.5, 1, t);
+    K.scl.setAttribute("d", curve([[52, 171], [70, 174], [92, 175], [110, 171]]));
+    K.scl.setAttribute("stroke-width", sw); K.scl.setAttribute("opacity", sw > .2 ? .3 : 0);
+    KL.cart.set(78, 120 + sh(78), 1);
+    KL.spur.set(40 - s * .7, tm - s * .1, sm(.5, .75, t));
+    KL.men.set(205, 166 - cb(205) / 2, 1);
+  }
+  relabel();
+  window.addEventListener("resize", relabel);
+  var draw = function(t){ spine(t); knee(t); };
+  draw.relabel = relabel;
+  return draw;
+}
+/* Slider for the "same story" figure: drag from stage one to four and the spine and knee wear together.
+   Dragging is continuous; letting go settles on the nearest stage. The numbers under the track jump to a stage. */
+(function(){
+  var fig = document.getElementById("tri"); if(!fig) return;
+  var range = document.getElementById("tri-r"), num = document.getElementById("tri-n"), ticks = fig.querySelectorAll(".tri-ticks button");
+  var set = stagesDraw(document.getElementById("tri-spine"), document.getElementById("tri-knee"));
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var shown = -1, cur = 0, want = 0, raf = 0;
+  function paint(t){
+    set(t);
+    fig.style.setProperty("--tri-p", t);
+    var k = Math.round(t * 3);
+    if(k !== shown){
+      shown = k; num.textContent = k + 1;
+      if(!reduce){ num.classList.remove("pop"); void num.offsetWidth; num.classList.add("pop"); }
+      ticks.forEach(function(b, i){ b.classList.toggle("on", i <= k); b.setAttribute("aria-pressed", i === k ? "true" : "false"); });
+      range.setAttribute("aria-valuetext", "Stage " + (k + 1) + " of 4");
+    }
+  }
+  function tick(){
+    raf = 0;
+    cur += (want - cur) * .16;
+    if(Math.abs(want - cur) < .002) cur = want; else raf = requestAnimationFrame(tick);
+    range.value = cur * 300; paint(cur);
+  }
+  function glide(t){
+    want = t;
+    if(reduce){ cur = t; range.value = t * 300; paint(t); return; }
+    if(!raf) raf = requestAnimationFrame(tick);
+  }
+  range.addEventListener("input", function(){
+    if(raf){ cancelAnimationFrame(raf); raf = 0; }
+    cur = want = range.value / 300; paint(cur);
+    fig.classList.add("used");
+  });
+  range.addEventListener("change", function(){ glide(Math.round(range.value / 100) / 3); });
+  ticks.forEach(function(b, i){ b.addEventListener("click", function(){ fig.classList.add("used"); glide(i / 3); }); });
+  paint(0);
 })();
 </script>
 </body>
